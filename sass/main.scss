@@ -1,0 +1,150 @@
+@import url("http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'");
+@import url("http://fonts.googleapis.com/css?family=Rokkitt:400,700");
+
+@font-face {
+	font-family: 'IcomoonSocial';
+  	src:url('../fonts/IcomoonSocial.eot?pihkoo');
+	src:url('../fonts/IcomoonSocial.eot?#iefixpihkoo') format('embedded-opentype'),
+		url('../fonts/IcomoonSocial.woff?pihkoo') format('woff'),
+		url('../fonts/IcomoonSocial.ttf?pihkoo') format('truetype'),
+		url('../fonts/IcomoonSocial.svg?pihkoo#icomoon') format('svg');
+	font-weight: normal;
+  	font-weight: normal;
+  	font-style: normal;
+  	-webkit-font-smoothing: antialiased;
+}
+
+@import "susy";
+@import "compass";
+@import "breakpoint";
+
+$susy: (
+    columns: 12, 
+    gutters: 1/4,
+    math: fluid,
+    output: float,
+    gutter-position: inside,
+    );
+
+$Colour-One:#293237;
+$Colour-Two:#b9bdbf;
+$header-colour: #e5451b;
+
+//fonts
+$header: 'Rokkitt', serif;
+$mainFont: 'Quicksand', sans-serif;
+
+.container{
+	@include container(80em);
+}
+
+body{
+	background: $Colour-One;
+}
+
+
+main{
+	@include span(12);
+    font-family: $mainFont;
+    font-size: 1.063em;
+    letter-spacing: 0.006em;
+    color: $Colour-Two;
+    text-align: center;    
+    margin-top: 5em;
+    margin-bottom: 5em;
+    @include breakpoint(37.5em){
+    	font-size: 1.313em;
+    	letter-spacing: 0.012em;
+    	margin-top: 3em;
+    	margin-bottom: 5em;
+    }
+    h1{
+        font-size: 3.438em;
+        letter-spacing: 0.04em;
+        color: $header-colour;
+    	font-family: $header;
+    	text-align: center;
+    	margin-top:15px;
+    	margin-bottom:15px;
+    	@include breakpoint(37.5em){
+    		font-size: 4.375em;
+        	letter-spacing: 0.075em;
+        	margin-top:20px;
+    		margin-bottom:20px;
+    	}
+    }
+    p{
+    	line-height: 1.5em;
+    }
+}
+
+// Social Media icons
+[class*="add-social"]{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 3px;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+  color: #fff;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  text-decoration:none; 
+  border-width:1px 0;
+}
+[class*="add-social"]:hover {
+	  top: -30px;
+	  background: #666;
+	  color: #fff;
+ }
+ [class*="add-social"]:before {
+	  font-family: 'IcomoonSocial';
+	  speak: none;
+	  font-style: normal;
+	  font-weight: normal;
+	  line-height: 1;
+	  -webkit-font-smoothing: antialiased;
+  }
+
+footer{
+	@include span(12);
+}
+
+#social-menu {
+	width:8.5em;
+	margin:0 auto;
+}
+
+.add-social-mail{
+	background:#999;
+}
+.add-social-mail:before{
+	content: "\e609";
+}	
+
+.add-social-github{
+	background:#999;
+}
+.add-social-github:before{
+	content:"\e606";
+}
+
+.add-social-fb{
+	background:#3b5997;
+}
+.add-social-fb:before{
+	content:"\e60b";
+}
+
+.add-social-twitter{
+	background:#41b7d8;
+}
+.add-social-twitter:before{
+	content: "\e60c";
+}
