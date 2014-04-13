@@ -97,20 +97,20 @@ main{
   -webkit-border-radius: 15px;
   text-decoration:none; 
   border-width:1px 0;
-}
-[class*="add-social"]:hover {
-	  top: -30px;
-	  background: #666;
-	  color: #fff;
- }
- [class*="add-social"]:before {
-	  font-family: 'IcomoonSocial';
-	  speak: none;
-	  font-style: normal;
-	  font-weight: normal;
-	  line-height: 1;
-	  -webkit-font-smoothing: antialiased;
+  &:hover {
+    top: -30px;
+    background: #666;
+    color: #fff;
   }
+  &:before {
+    font-family: 'IcomoonSocial';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }  
+}
 
 footer{
 	@include span(12);
@@ -123,28 +123,30 @@ footer{
 
 .add-social-mail{
 	background:#999;
+  &:before{
+  content: "\e609";
+  } 
 }
-.add-social-mail:before{
-	content: "\e609";
-}	
 
 .add-social-github{
 	background:#999;
-}
-.add-social-github:before{
-	content:"\e606";
+  &:before{
+  content:"\e606";
+  }
 }
 
 .add-social-fb{
 	background:#3b5997;
-}
-.add-social-fb:before{
-	content:"\e60b";
+  &:before{
+  content:"\e60b";
+  }
 }
 
 .add-social-twitter{
 	background:#41b7d8;
+  &:before{
+  content: "\e60c";
+  }
 }
-.add-social-twitter:before{
-	content: "\e60c";
-}
+
+
